@@ -70,7 +70,7 @@ namespace Hardmode
         static void DisplayTorpedoTypeOnClick(ref PlayerFunctions __instance, Transform torpedoPosition)
         {
             Torpedo component = torpedoPosition.gameObject.GetComponent<Torpedo>();
-            __instance.PlayerMessage($"Conn, Sonar, torpedo classified as {component.databaseweapondata.weaponName}.", __instance.messageLogColors["Sonar"], "", false);
+            __instance.PlayerMessage($"Conn, sonar: torpedo classified as {component.databaseweapondata.weaponName}.", __instance.messageLogColors["Sonar"], "", false);
         }
         //END DISPLAY TORPEDO TYPE ON CLICK
 
@@ -80,7 +80,8 @@ namespace Hardmode
         static void DisplayLoudExplosionOnHit(ref Compartment __instance)
         {
             string contactname = UIFunctions.globaluifunctions.playerfunctions.GetFullContactName(UIFunctions.globaluifunctions.playerfunctions.sensormanager.tacticalmap.mapContact[__instance.activeVessel.vesselListIndex].contactText.text, __instance.activeVessel.vesselListIndex);
-            UIFunctions.globaluifunctions.playerfunctions.PlayerMessage($"Conn, Sonar, loud explosion on the bearing of {contactname}.", UIFunctions.globaluifunctions.playerfunctions.messageLogColors["Sonar"], "", false);
+            UIFunctions.globaluifunctions.playerfunctions.PlayerMessage($"Conn, sonar: loud explosion on the bearing of {contactname}.", UIFunctions.globaluifunctions.playerfunctions.messageLogColors["Sonar"], "", false);
         }
+        //END TEXT FOR LOUD EXPLOSION ON BEARING
     }
 }
